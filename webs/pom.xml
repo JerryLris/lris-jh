@@ -10,5 +10,7 @@
   <modules>
   	<module>SpringDataJPA</module>
   	<module>lris-mybatis</module>
+  	<module>lris-spring</module>
+  	<module>lris-test</module>
   </modules>
 </project>

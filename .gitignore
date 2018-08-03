@@ -1,21 +1,10 @@
-/target/
-
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
-
-### eclipse ###
 .svn/
 *.class
 target/
-/*/.settings/
 *.jar
 *.war
 *.iml
 /.idea/
-/*/.classpath
 /.launch
 /.project
 /*.launch
@@ -23,7 +12,9 @@ target/
 /ivy*
 /eclipse/
 /.classpath
-/*/.gitignore
 /.settings/
-/*/.project
-/*/bin/
+/**/.settings/
+/**/.gitignore
+/**/.classpath
+/**/.project
+/**/bin/
