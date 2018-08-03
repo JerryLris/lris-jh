@@ -1,15 +1,16 @@
 package com.lris.utils;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.util.DigestUtils;
+
 import com.taobao.api.ApiException;
 import com.taobao.api.DefaultTaobaoClient;
 import com.taobao.api.TaobaoClient;
 import com.taobao.api.domain.Userinfos;
 import com.taobao.api.request.OpenimUsersAddRequest;
 import com.taobao.api.response.OpenimUsersAddResponse;
-import org.springframework.util.DigestUtils;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by ${符柱成} on 2017/3/13.
