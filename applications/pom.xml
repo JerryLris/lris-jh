@@ -10,5 +10,6 @@
   <name>applications</name>
   <modules>
   	<module>parentv1</module>
+  	<module>parentSSM</module>
   </modules>
 </project>
