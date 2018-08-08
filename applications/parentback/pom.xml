@@ -2,15 +2,9 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.lris.jh</groupId>
-    <artifactId>lris-jh</artifactId>
+    <artifactId>applications</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>applications</artifactId>
+  <artifactId>parentback</artifactId>
   <packaging>pom</packaging>
-  <name>applications</name>
-  <modules>
-  	<module>parentv1</module>
-  	<module>parentSSM</module>
-  	<module>parentback</module>
-  </modules>
 </project>

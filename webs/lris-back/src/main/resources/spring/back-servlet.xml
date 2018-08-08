@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:cache="http://www.springframework.org/schema/cache"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc" xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:jms="http://www.springframework.org/schema/jms" xmlns:lang="http://www.springframework.org/schema/lang"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:oxm="http://www.springframework.org/schema/oxm"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:task="http://www.springframework.org/schema/task"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.1.xsd  
+        http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache-4.1.xsd  
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd  
+        http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-4.1.xsd  
+        http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-4.1.xsd  
+        http://www.springframework.org/schema/jms http://www.springframework.org/schema/jms/spring-jms-4.1.xsd  
+        http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang-4.1.xsd  
+        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd  
+        http://www.springframework.org/schema/oxm http://www.springframework.org/schema/oxm/spring-oxm-4.1.xsd  
+        http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-4.1.xsd  
+        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.1.xsd  
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.1.xsd"
+	default-autowire="byName">
+
+	<mvc:annotation-driven />
+
+	<!-- 定时器 -->
+	<task:annotation-driven />
+
+	<!-- 开启注解扫描 -->
+	<context:component-scan base-package="com.lris.ain.**.action" />
+
+	<!-- 视图解析器 -->
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/pages/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+
+	 <mvc:view-controller path="/" view-name="forward:/index"/>
+
+	<!-- 配置静态资源 -->
+	<!-- <mvc:default-servlet-handler /> -->
+
+	<!-- 文件上传 -->
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<!-- 设置上传文件的最大尺寸为1MB -->
+		<property name="maxUploadSize">
+			<value>1048576</value>
+		</property>
+	</bean>
+
+	<!-- 异常处理 -->
+
+
+<!-- 	<mvc:interceptors>
+		权限拦截器
+			<mvc:interceptor>
+				<mvc:mapping path="/**"/>
+				<bean class="com.bird.lend.bap.config.RightInterceptor" />
+			</mvc:interceptor>
+
+		系统日志拦截器
+			<mvc:interceptor>
+				<mvc:mapping path="/**"/>
+				屏蔽URL
+				<mvc:exclude-mapping path="/index/**"/>
+				<mvc:exclude-mapping path="/login/**"/>
+				<mvc:exclude-mapping path="/usercenter/**"/>
+				<mvc:exclude-mapping path="/**/list"/>
+				<mvc:exclude-mapping path="/**/detail"/>
+				<mvc:exclude-mapping path="/**/**list"/>
+				<bean class="com.bird.lend.interceptor.SystemOperationLogInterceptor"></bean>
+			</mvc:interceptor>
+	</mvc:interceptors> -->
+
+
+</beans>
