@@ -29,7 +29,7 @@ public class TestDB {
 		jdbcTemplate.update(sql, var.getKey(), var.getVal(), var.getType(), var.getDesc());
 		
 	}
-/*		String sql = "select t1.F02 mobile,t1.F04 name,t1.F06 idcard,t2.F06 bankcard from d11.b1104 t2 left join d11.b1101 t1 on t1.F01 = t2.F02 where t2.F11 = '建设银行'";
+/*		String sql = "select t1.F02 mobile,t1.F04 name,t1.F06 idcard,t2.F06 bankcard from lris.b1104 t2 left join lris.b1101 t1 on t1.F01 = t2.F02 where t2.F11 = '建设银行'";
 		List<Map<String, Object>> objs = jdbcTemplate.query(sql, new RowMapper<Map<String, Object>>(){
 			@Override
 			public Map<String, Object> mapRow(ResultSet rs, int rowNum) throws SQLException {

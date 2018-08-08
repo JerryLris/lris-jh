@@ -12,7 +12,7 @@ public abstract class PubDao extends JdbcDaoSupport{
 	 * @return
 	 */
 	public String getSysVal(String key) throws Exception{
-		String sql = "select F02 from D10.B1001 where F01=?";
+		String sql = "select F02 from lris.B1001 where F01=?";
 		String val = this.getJdbcTemplate().queryForObject(sql, String.class, key);
 		return val;
 	}
