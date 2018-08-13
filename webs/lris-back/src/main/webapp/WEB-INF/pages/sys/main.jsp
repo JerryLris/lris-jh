@@ -13,9 +13,9 @@
 	.user-nav {margin: 0;margin-right: -15px;}
 	.container{ width: 100%;}
 	.navbar{margin-bottom: 0px;height: 50px;border: none;}
-	#head-nav{background-color: #11F273; /*#2494F2;*/height: 50px;}
+	#head-nav{background-color: #23262E; /*#2494F2;*/height: 50px;}
 	#cl-wrapper{position: absolute;left:0px;top:50px;right: 0px;bottom: 0px;overflow: hidden;}
-	#side-menu{position: absolute;left:0;top: 0;width: 200px;bottom: 0;overflow-y:auto;overflow-x:hidden;background-color: #2F4050;}
+	#side-menu{position: absolute;left:0;top: 0;width: 200px;bottom: 0;overflow-y:auto;overflow-x:hidden;background-color: 393D49;}
 	#cotentpanel{position: absolute;left:200px;top: 0px;right: 0;bottom: 0;overflow:hidden;}
 	#functab {position: absolute;left: 0;top: 0;right: 0;overflow: hidden;/* border: 1px solid #F0F0F0; */background-color: #F2F2F2;}
 	#functab .menutab{float:left;height: 30px;line-height: 30px;overflow: hidden;width:100px;margin-left:1px;position: relative;}
@@ -28,9 +28,9 @@
 	#workcenter {position: absolute;left: 2px;top: 38px;right: 0;bottom: 0;overflow: hidden;/* border-top: 1px solid #F4F5F6 */}
 	.nav > li > a {color: #a7b1c2;font-weight: 550;padding: 8px 20px 8px 25px;}
 	.nav > li.active > a {color: #ffffff;}
-	.nav > li > a:hover,.nav > li > a:focus {background-color: #293846;color: white;}
+	.nav > li > a:hover,.nav > li > a:focus {background-color: #4E5465;color: white;}
 	.nav > li > a i {margin-right: 6px;}
-	.nav > li.active {border-left: 4px solid #19aa8d;background: #293846;}
+	.nav > li.active {border-left: 4px solid #19aa8d;background: #282B33;}
 	.nav.nav-second-level > li.active {border: none;}
 	.nav.nav-second-level.collapse[style] {height: auto !important;}
 	.arrow {float: right;}
@@ -42,7 +42,7 @@
 	#usernav > a:link,
 	#usernav > a:visited,
 	#usernav >  a:focus {background-color: transparent;color: white;text-decoration: none;}
-	.header-selected{background-color:#5FB929;}
+	.header-selected{background-color:#23262E;}
 	.item-selected{background-color: #293846;color: white;}
 	.dropdown-menu > li > a:hover,
 	.dropdown-menu > li > a:focus,
