@@ -74,9 +74,6 @@
 		  <div class="form-group form-group-sm">
     		<label class="col-sm-2 control-label" >所属部门:</label>
     		<select id="emp" name="cuiShoueId" class="form-control" style="width:250px" value="${obj.f13}" >
-    			<!-- <option value="">请选择</option> -->
-    			<%-- <option value="A" <c:if test="${'A' eq param.dataSource }">selected="selected"</c:if>>河马</option> --%>
-    			<%-- <option value="B" <c:if test="${'B' eq param.dataSource }">selected="selected"</c:if>>代理</option> --%>
     		</select>
   		</div>
 			<div class="form-group form-group-sm">
@@ -118,23 +115,6 @@
 		        }    
 		    });
 		});
-		$(function () {
-
-			var url = "<%=rootpath%>/CuiShouEmp/getList";
-			$.post(url,{},function(data){
-				var s = $("#emp").attr("value")
-				var optionstring="";
-				$(data).each(function(i,n){		
-					if(s==n.F01){
-						optionstring += "<option selected='selected' value=\"" +n.F01+ "\" >" + n.F02+ "</option>";
-					}else{
-						optionstring += "<option value=\"" +n.F01+ "\" >" + n.F02+ "</option>";
-					} 
-				});
-				$("#emp").html("<option value='0'>请选择...</option> "+optionstring);  
-		        
-			},'json');
-		})
 	</script>
 </body>
 </html>

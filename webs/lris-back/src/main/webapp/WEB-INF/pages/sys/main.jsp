@@ -80,31 +80,9 @@
 				Map<String,Right> lists=(Map<String,Right>)request.getAttribute("rights");
 			%>
 				<%@include file="/WEB-INF/include/menu/sys.jsp" %>
-				<%@include file="/WEB-INF/include/menu/user.jsp" %>
-				<%@include file="/WEB-INF/include/menu/base.jsp" %>
-				<%@include file="/WEB-INF/include/menu/fenqi.jsp" %> 
-				<%@include file="/WEB-INF/include/menu/fund.jsp" %>
-				<%@include file="/WEB-INF/include/menu/info.jsp" %>
-				<%@include file="/WEB-INF/include/menu/report.jsp" %>
-				<%@include file="/WEB-INF/include/menu/salary.jsp" %>
-				<%@include file="/WEB-INF/include/menu/risk.jsp" %>
-				<%if(lists.containsKey("CUSTOMER.CustomerManager")){%>
+				<%-- <%if(lists.containsKey("CUSTOMER.CustomerManager")){%>
 					<%@include file="/WEB-INF/include/menu/customer.jsp" %>
-				<%}%>
-				<%if(lists.containsKey("POSTLOAN.Menu")){%>
-					<%@include file="/WEB-INF/include/menu/postloan.jsp" %>
-				<%}%>
-			    <%@include file="/WEB-INF/include/menu/extra.jsp" %>
-			    <%@include file="/WEB-INF/include/menu/recharge.jsp" %>
-			    <%if(lists.containsKey("Operate.Menu")){%>
-					<%@include file="/WEB-INF/include/menu/operate.jsp" %>
-				<%}%>
-				<%if(lists.containsKey("Product.Menu")){%>
-					<%@include file="/WEB-INF/include/menu/product.jsp" %>
-				<%}%>
-			    <%if(lists.containsKey("PARTNER.Menu")){%>
-					<%@include file="/WEB-INF/include/menu/partner.jsp" %>
-				<%}%>
+				<%}%> --%>
 			</ul>
 		</div>
 		<div id="cotentpanel">

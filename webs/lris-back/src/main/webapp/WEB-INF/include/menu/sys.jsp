@@ -13,7 +13,6 @@ int menuNum = 0;
 <%if(list.containsKey("SYS.UserOperationLog")){menuNum++;%><li><a href="javascript:gotoPage('<%=rootpath%>/UserOperationLog/list','用户操作日志','SYS_Useroperationlog')">用户操作日志</a></li><%}%>
 <%if(list.containsKey("SYS.BackGroundOperationLog")){menuNum++;%><li><a href="javascript:gotoPage('<%=rootpath%>/BackGroundOperationLog/list','后台操作日志','SYS_Backgroundoperationlog')">后台操作日志</a></li><%}%>
 <%if(list.containsKey("SYS.MsgSentLog")){menuNum++;%><li><a href="javascript:gotoPage('<%=rootpath%>/MsgSentLog/list','短信下发日志','SYS_MsgSentLog')">短信下发日志</a></li><%}%>
-<%if(list.containsKey("SYS.SystemLog")){menuNum++;%><li><a href="javascript:gotoPage('<%=rootpath%>/systemLog/list','系统操作日志','SYS_SystemLog')">系统操作日志</a></li><%}%>
 </ul>
 </li>
 <%if(0==menuNum){%>

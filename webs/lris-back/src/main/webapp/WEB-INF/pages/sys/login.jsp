@@ -1,7 +1,7 @@
 <!DOCTYPE>
 <html lang="zh-cn">
 <head>
-	<title>lris-运营平台</title>
+	<title>lris</title>
 	<%@include file="/WEB-INF/include/meta.jsp"%>
 	
     <style type="text/css">

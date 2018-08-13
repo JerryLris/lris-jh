@@ -44,12 +44,12 @@ public class LogRepositoryImpl extends PubDao implements LogRepository {
 		}
 
 		if (query.getPageIndex() == 1) {
-			String countsql = "select count(1) from D13.B1305 t1 " + "left join D10.B1006 t2 on t2.F01=t1.F02 " + wheresql;
+			String countsql = "select count(1) from lris.B1305 t1 " + "left join lris.B1006 t2 on t2.F01=t1.F02 " + wheresql;
 			int count = this.getJdbcTemplate().queryForObject(countsql, Integer.class, params.toArray());
 			query.getPage().setTotalCount(count);
 		}
 
-		String sql = "select t2.F02,t1.F03,t1.F06 from D13.B1305 t1 " + "left join D10.B1006 t2 on t2.F01=t1.F02 " + wheresql;
+		String sql = "select t2.F02,t1.F03,t1.F06 from lris.B1305 t1 " + "left join lris.B1006 t2 on t2.F01=t1.F02 " + wheresql;
 		sql += " order by t1.F01 desc limit ?,?";
 		params.add((query.getPageIndex() - 1) * query.getPageSize());
 		params.add(query.getPageSize());
@@ -107,12 +107,12 @@ public class LogRepositoryImpl extends PubDao implements LogRepository {
 		}
 
 		if (query.getPageIndex() == 1) {
-			String countsql = "select count(1) from D13.B1302 t1 " + "left join D11.B1101 t2 on t2.F01=t1.F08 " + wheresql;
+			String countsql = "select count(1) from lris.B1302 t1 " + "left join lris.B1101 t2 on t2.F01=t1.F08 " + wheresql;
 			int count = this.getJdbcTemplate().queryForObject(countsql, Integer.class, params.toArray());
 			query.getPage().setTotalCount(count);
 		}
 
-		String sql = "select t2.F04 username,t1.F02,t1.F03,t1.F04,t1.F05,t1.F06,t1.F07,t1.F08,t1.F09,t1.F10,t1.F11 from D13.B1302 t1" + " left join D11.B1101 t2 on t2.F01=t1.F08 " + wheresql;
+		String sql = "select t2.F04 username,t1.F02,t1.F03,t1.F04,t1.F05,t1.F06,t1.F07,t1.F08,t1.F09,t1.F10,t1.F11 from lris.B1302 t1" + " left join lris.B1101 t2 on t2.F01=t1.F08 " + wheresql;
 		sql += " order by t1.F01 desc limit ?,?";
 		params.add((query.getPageIndex() - 1) * query.getPageSize());
 		params.add(query.getPageSize());
@@ -154,12 +154,12 @@ public class LogRepositoryImpl extends PubDao implements LogRepository {
 		}
 
 		if (query.getPageIndex() == 1) {
-			String countsql = "select count(1) from D10.B1091 "+ wheresql;
+			String countsql = "select count(1) from lris.B1091 "+ wheresql;
 			int count = this.getJdbcTemplate().queryForObject(countsql, Integer.class, params.toArray());
 			query.getPage().setTotalCount(count);
 		}
 
-		String sql = "select F01,F02,F03,F04,F05,F06,F07,F08,F09,F10 from D10.B1091 " + wheresql + "order by F01 desc limit ?,?";
+		String sql = "select F01,F02,F03,F04,F05,F06,F07,F08,F09,F10 from lris.B1091 " + wheresql + "order by F01 desc limit ?,?";
 		params.add((query.getPageIndex() - 1) * query.getPageSize());
 		params.add(query.getPageSize());
 		pageResult.setPage(query.getPage());
@@ -186,20 +186,20 @@ public class LogRepositoryImpl extends PubDao implements LogRepository {
 
 	@Override
 	public void logLogin(B1306 b1306) throws Exception {
-		getJdbcTemplate().update("insert into D13.B1306(F02,F03,F04,F05,F06,F07,F08) values(?,?,?,?,?,?,?)", //
+		getJdbcTemplate().update("insert into lris.B1306(F02,F03,F04,F05,F06,F07,F08) values(?,?,?,?,?,?,?)", //
 				b1306.getF02(), b1306.getF03(), b1306.getF04(), b1306.getF05(), b1306.getF06(), b1306.getF07(), b1306.getF08());
 	}
 
 	@Override
 	public void logReq(B1304 b1304) throws Exception {
-		getJdbcTemplate().update("insert into D13.b1304(F02,F03,F04,F05,F06,F07,F08,F09,F10,F11,F12) values(?,?,?,?,?,?,?,?,?,?,?)",//
+		getJdbcTemplate().update("insert into lris.b1304(F02,F03,F04,F05,F06,F07,F08,F09,F10,F11,F12) values(?,?,?,?,?,?,?,?,?,?,?)",//
 				b1304.getF02(), b1304.getF03(), b1304.getF04(), b1304.getF05(), b1304.getF06(), b1304.getF07(), b1304.getF08(), //
 				b1304.getF09(), b1304.getF10(), b1304.getF11(), b1304.getF12());
 	}
 
 	@Override
 	public void logChange(B1305 b1305) throws Exception {
-		getJdbcTemplate().update("insert into D13.b1305(F02,F03,F06) values(?,?,?)", b1305.getF02(), b1305.getF03(), b1305.getF06());
+		getJdbcTemplate().update("insert into lris.b1305(F02,F03,F06) values(?,?,?)", b1305.getF02(), b1305.getF03(), b1305.getF06());
 	}
 	
 }

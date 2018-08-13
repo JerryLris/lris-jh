@@ -11,12 +11,12 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.lris.ain.back.common.domain.MsgType;
 import com.lris.ain.back.common.repository.MsgRepository;
-import com.lris.ain.back.common.variable.LetterVariable;
 import com.lris.ain.back.entities.B1091;
 import com.lris.ain.core.exception.ParamException;
 import com.lris.ain.core.net.HttpHelper;
 import com.lris.ain.core.utils.parser.BooleanParser;
 import com.lris.ain.core.utils.parser.IntegerParser;
+import com.lris.ain.core.variables.LetterVariable;
 
 
 /**
