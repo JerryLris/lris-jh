@@ -7,6 +7,12 @@ import com.lris.ain.pachong.core.Pachong;
 public class test {
 
 	public static void main(String[] args) throws Exception {
+		
+		pachong();
+		
+	}
+	
+	public static void pachong() throws Exception {
 		Pachong p = new Pachong();
 		String regex = "[a-zA-z]+://www.ugirls.com/Models/[^\\s]*.html";
 		for (int i=2;i<10;i++){
@@ -18,7 +24,5 @@ public class test {
             	p.doDowmLoadImageUrl(ul, regex2);
             }
 		}
-		
-		
 	}
 }
