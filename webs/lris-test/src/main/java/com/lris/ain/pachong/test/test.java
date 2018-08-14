@@ -9,7 +9,7 @@ public class test {
 	public static void main(String[] args) throws Exception {
 		
 		pachong();
-		
+		pachong();
 	}
 	
 	public static void pachong() throws Exception {
@@ -24,7 +24,7 @@ public class test {
             	p.doDowmLoadImageUrl(ul, regex2);
             }
 		}
-		
+	
 		System.out.println("这是我的master分支动的！");
 		
 		
