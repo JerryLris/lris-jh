@@ -211,7 +211,7 @@ public class SysUserRepositoryImpl extends PubDao implements SysUserRepository {
 
 	@Override
 	public int getLoginErrorTime(String ip) throws Exception {
-		List<Integer> list = getJdbcTemplate().query("select count(1) from D13.B1306 where F03=? and date(F04)=? and F05=1", new RowMapper<Integer>() {
+		List<Integer> list = getJdbcTemplate().query("select count(1) from lris.B1306 where F03=? and date(F04)=? and F05=1", new RowMapper<Integer>() {
 			@Override
 			public Integer mapRow(ResultSet rs, int arg1) throws SQLException {
 				return rs.getInt(1);
@@ -222,7 +222,7 @@ public class SysUserRepositoryImpl extends PubDao implements SysUserRepository {
 
 	@Override
 	public int getMessageWrongTime(int B1006id) throws Exception {
-		List<Integer> list = getJdbcTemplate().query("select count(1) from D13.B1306 where F02=? and date(F04)=? and F05=1", new RowMapper<Integer>() {
+		List<Integer> list = getJdbcTemplate().query("select count(1) from lris.B1306 where F02=? and date(F04)=? and F05=1", new RowMapper<Integer>() {
 			@Override
 			public Integer mapRow(ResultSet rs, int arg1) throws SQLException {
 				return rs.getInt(1);
@@ -292,7 +292,7 @@ public class SysUserRepositoryImpl extends PubDao implements SysUserRepository {
 
 	@Override
 	public void unlock(int uid) throws Exception {
-		String sql = "delete from D13.B1306 where F02 = ? and date(F04) = ? and F05 = 1 ";
+		String sql = "delete from lris.B1306 where F02 = ? and date(F04) = ? and F05 = 1 ";
 		this.getJdbcTemplate().update(sql, uid ,new Date(System.currentTimeMillis()));
 	}
 

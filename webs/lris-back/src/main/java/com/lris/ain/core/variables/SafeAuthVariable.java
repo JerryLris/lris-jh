@@ -1,4 +1,4 @@
-package com.lris.ain.back.common.variable;
+package com.lris.ain.core.variables;
 
 import java.io.InputStreamReader;
 

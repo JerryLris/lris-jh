@@ -15,7 +15,6 @@ import com.lris.ain.back.common.SessionManager;
 import com.lris.ain.back.common.domain.SessionKey;
 import com.lris.ain.back.common.service.LogService;
 import com.lris.ain.back.common.service.SysService;
-import com.lris.ain.back.common.variable.SafeAuthVariable;
 import com.lris.ain.back.entities.B1006;
 import com.lris.ain.back.sys.repository.SysUserRepository;
 import com.lris.ain.back.sys.service.SysUserService;
@@ -25,6 +24,7 @@ import com.lris.ain.core.exception.ParamException;
 import com.lris.ain.core.query.PageResult;
 import com.lris.ain.core.query.Query;
 import com.lris.ain.core.utils.parser.IntegerParser;
+import com.lris.ain.core.variables.SafeAuthVariable;
 
 @Service
 public class SysUserServiceImpl implements SysUserService {
