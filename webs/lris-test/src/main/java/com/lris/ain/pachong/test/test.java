@@ -9,7 +9,7 @@ public class test {
 	public static void main(String[] args) throws Exception {
 		
 		pachong();
-		
+		pachong();
 	}
 	
 	public static void pachong() throws Exception {
