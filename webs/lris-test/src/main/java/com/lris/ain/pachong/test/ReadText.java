@@ -24,7 +24,7 @@ public class ReadText {
 		}
 		System.out.println("-------------------------------------");
 		//列表一组文件对象
-		File[] fs = f.listFiles();
+		File[] fs = f.listFiles(new JavaFileFilter());
 		for(File file:fs) {
 			System.out.println(file.getName()+":"+file.length());
 		}
